@@ -1,0 +1,23 @@
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
+
+  if (req.url === "/") {
+    res.writeHead(200);
+    res.end("Xin chào Node.js\nTrang chủ");
+  } else if (req.url === "/about") {
+    res.writeHead(200);
+    res.end("Trang giới thiệu");
+  } else if (req.url === "/contact") {
+    res.writeHead(200);
+    res.end("Trang liên hệ");
+  } else {
+    res.writeHead(404);
+    res.end("Không tìm thấy trang");
+  }
+});
+
+server.listen(3000, () => {
+  console.log("Server đang chạy tại địa chỉ http://localhost:3000");
+});
