@@ -1,0 +1,30 @@
+<%- include('layouts/header') %>
+<%- include('layouts/navbar') %>
+
+<h1><%= title %></h1>
+
+<% items.forEach(item => { %>
+
+<div class="card">
+
+<h3><%= item.name %></h3>
+
+<p><%= item.description %></p>
+
+<p class="price">Giá: <%= item.price %> VNĐ</p>
+
+<% if(item.hot){ %>
+<span class="hot">Nổi bật</span>
+<% } else { %>
+<span class="normal">Bình thường</span>
+<% } %>
+
+<br>
+
+<a class="btn" href="/detail/<%= item.id %>">Xem chi tiết</a>
+
+</div>
+
+<% }) %>
+
+<%- include('layouts/footer') %>
