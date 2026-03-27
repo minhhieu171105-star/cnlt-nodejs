@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Trang chủ</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>📚 Danh sách bài viết</h1>
+
+  <a href="/blogposts/new" class="btn-create">+ Tạo bài viết</a>
+
+  <% posts.forEach(post => { %>
+    <div class="post">
+      <h2><%= post.title %></h2>
+      <p><%= post.body %></p>
+
+      <div class="actions">
+        <a href="/blogposts/<%= post._id %>" class="btn-view">Xem</a>
+        <a href="/blogposts/edit/<%= post._id %>" class="btn-edit">Sửa</a>
+        <a href="/blogposts/delete/<%= post._id %>" 
+           class="btn-delete"
+           onclick="return confirm('Xóa bài này?')">
+           Xóa
+        </a>
+      </div>
+    </div>
+  <% }) %>
+
+</div>
+
+</body>
+</html>
