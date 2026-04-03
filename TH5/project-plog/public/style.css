@@ -1,0 +1,145 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #74ebd5, #acb6e5);
+  padding: 40px;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Tiêu đề */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Nút chung */
+a,
+button {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Nút tạo */
+.btn-create {
+  background: #28a745;
+  color: white;
+}
+
+/* Card bài viết */
+.post {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+}
+
+/* Title */
+.post h2 {
+  color: #333;
+}
+
+/* Nội dung */
+.post p {
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Nhóm nút */
+.actions a {
+  margin-right: 5px;
+}
+
+/* Nút sửa */
+.btn-edit {
+  background: #ffc107;
+  color: black;
+}
+
+/* Nút xóa */
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+/* Nút xem */
+.btn-view {
+  background: #007bff;
+  color: white;
+}
+
+/* Form */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Button submit */
+button {
+  background: #007bff;
+  color: white;
+}
+
+/* Link về */
+.back {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+body {
+  font-family: Arial;
+  background: #f5f5f5;
+}
+
+.container {
+  width: 700px;
+  margin: auto;
+}
+
+.post {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.actions a {
+  margin-right: 10px;
+}
