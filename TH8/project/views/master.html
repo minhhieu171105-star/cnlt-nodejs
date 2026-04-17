@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload File</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        background: #ffffff;
+      }
+
+      .box {
+        background: rgb(192, 255, 238);
+        padding: 20px;
+        margin: 50px auto;
+        width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+      }
+
+      button {
+        padding: 8px 15px;
+        background: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+      /* toast thả xuống */
+      .toast {
+        position: fixed;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px 25px;
+        color: white;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: top 0.5s ease;
+      }
+
+      .toast.show {
+        top: 20px;
+      }
+
+      .success {
+        background: green;
+      }
+      .error {
+        background: red;
+      }
+
+      a {
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h2>Upload tối đa 17 file</h2>
+
+      <form id="uploadForm">
+        <input type="file" name="files" multiple required />
+        <br /><br />
+        <button>Upload</button>
+      </form>
+
+      <br />
+      <a href="/files">📂 Xem file đã upload</a>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script>
+      const form = document.getElementById("uploadForm");
+      const toast = document.getElementById("toast");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const input = form.querySelector('input[type="file"]');
+
+        if (input.files.length > 17) {
+          return showToast("Chỉ tối đa 17 file", false);
+        }
+
+        const formData = new FormData(form);
+
+        try {
+          const res = await fetch("/upload", {
+            method: "POST",
+            body: formData,
+          });
+
+          const text = await res.text();
+          const isError = text.includes("tồn tại") || !res.ok;
+showToast(text, !isError);
+        } catch {
+          showToast("Lỗi server", false);
+        }
+      });
+
+      function showToast(msg, ok) {
+        toast.innerText = msg;
+        toast.className = "toast " + (ok ? "success" : "error");
+
+        setTimeout(() => toast.classList.add("show"), 10);
+        setTimeout(() => toast.classList.remove("show"), 3000);
+      }
+    </script>
+  </body>
+</html>

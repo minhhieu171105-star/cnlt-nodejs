@@ -1,0 +1,8 @@
+Favorite Subject: Web Programming
+
+Web Programming is my favorite subject because it allows me to create real-world applications and express my creativity through coding. This course covers essential topics such as HTML, CSS, JavaScript, web design principles, frameworks like Bootstrap and ReactJS, server-side programming with Node.js and PHP, and database management with MySQL/MongoDB. These skills are crucial in the digital age and provide a solid foundation for a future career in web development, e-commerce, or even entrepreneurship. I plan to learn by combining theory with hands-on practice, participating in group projects, and exploring online resources to enhance my knowledge.
+
+dịch
+Môn học yêu thích: Lập trình web
+
+Lập trình web là môn học yêu thích của tôi vì nó giúp tôi tạo ra các ứng dụng thực tế và thể hiện sự sáng tạo qua lập trình. Môn học này bao gồm các nội dung quan trọng như HTML, CSS, JavaScript, nguyên tắc thiết kế web, các framework như Bootstrap và ReactJS, lập trình phía server với Node.js và PHP, cũng như quản lý cơ sở dữ liệu bằng MySQL/MongoDB. Những kỹ năng này rất cần thiết trong thời đại số và là nền tảng vững chắc cho sự nghiệp tương lai trong lập trình web, thương mại điện tử hoặc khởi nghiệp. Tôi dự định học bằng cách kết hợp lý thuyết với thực hành, tham gia các dự án nhóm và tận dụng tài nguyên trực tuyến để nâng cao kiến thức.
