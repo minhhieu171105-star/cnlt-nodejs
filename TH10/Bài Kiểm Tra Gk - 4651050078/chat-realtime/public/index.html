@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Messenger Clone Pro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login-overlay" class="overlay">
+      <div class="login-card">
+        <h1>💬 Messenger</h1>
+        <input type="text" id="username" placeholder="Nhập tên của bạn..." />
+        <button onclick="joinChat()">Vào Chat</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="sidebar">
+        <div class="my-info" id="me-display">Đang chờ...</div>
+        <div class="online-label">Danh sách online</div>
+        <!-- Thêm dòng này -->
+        <ul id="users"></ul>
+      </div>
+
+      <div class="main">
+        <div class="chat-header">
+          <h3 id="chatWith">Chọn bạn bè</h3>
+        </div>
+        <div id="messages"></div>
+        <div class="send-box">
+          <input
+            type="text"
+            id="msg-input"
+            placeholder="Nhập tin nhắn..."
+            disabled
+          />
+          <button id="send-btn" onclick="sendMessage()" disabled>Gửi</button>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
